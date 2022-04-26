@@ -15,3 +15,6 @@ Para correr DOODS se tienen dos opciones, correrlo en un contenedor independient
 Una vez corriendo HASSOS, se deben instalar las cámaras IP. Se incluye el archivo `esp32-cam.yaml` que es un archivo de configuración usado para *flashear* la cámara ESP32-CAM. Para esto, es necesario instalar la extensión `ESP-HOME` de Home Assistant (https://www.home-assistant.io/integrations/esphome/). Una vez instalada, se debe agregar y flashear un dispositivo usando el *Dashboard* que provee la extensión. Con esto, tendremos la cámara corriendo (se deben cambiar parámetros en el archivo para que funcione correctamente).
 
 Cabe decir que DOODS funciona con cualquier cámara IP o con imágenes fijas, y solamente se deben agregar a Home Assistant a través de una entidad `camera` como se muestra en el archivo de configuración.
+
+## Para instalar en PC o Mac
+Se puede correr Home Assistant en una máquina virtual o como un container de Docker (Home Assistant Core) siguiendo las instrucciones de https://www.home-assistant.io/installation según el sistema operativo o máquina en donde se quiera correr.
