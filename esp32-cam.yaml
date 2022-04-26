@@ -1,0 +1,63 @@
+# ----- Configuration file for esp32-cam -----
+# 
+# This file handles all the configuration to setup
+# and run an esp32-cam module to interface with 
+# homeassistant via esphome add-on.
+# 
+# --------------------------------------------
+esphome:
+  name: your-device-name
+
+esp32:
+  board: esp32cam
+  framework:
+    type: arduino
+
+# Enable logging
+logger:
+
+# Enable Home Assistant API
+api:
+
+ota:
+  password: "3cb2f0d35dbb11db1802fd1b7bccfef9"
+
+wifi:
+  ssid: "your-wifi-ssid"
+  password: "your-wifi-password"
+
+  # Enable fallback hotspot (captive portal) in case wifi connection fails
+  ap:
+    ssid: "fallback-ssid"
+    password: "fallback-password"
+
+captive_portal:
+
+# ----- Camera configuraitions ------
+esp32_camera:
+  external_clock:
+    pin: GPIO0
+    frequency: 20MHz
+  i2c_pins:
+    sda: GPIO26
+    scl: GPIO27
+  data_pins: [GPIO5, GPIO18, GPIO19, GPIO21, GPIO36, GPIO39, GPIO34, GPIO35]
+  vsync_pin: GPIO25
+  href_pin: GPIO23
+  pixel_clock_pin: GPIO22
+  power_down_pin: GPIO32
+
+  # Image settings
+  name: your-camera-name
+  resolution: 640x480
+  #resolution: 800x600
+  
+# from https://github.com/esphome/feature-requests/issues/960
+#external_components:
+#  source: github://ayufan/esphome-components
+
+esp32_camera_web_server:
+  - port: 8080
+    mode: stream
+  - port: 8081
+    mode: snapshot
