@@ -2,9 +2,9 @@ default_config:
     
 homeassistant:
     name: your-unit-name
-    latitude: -33.31924 
-    longitude: -77.7054
-    elevation: 904
+    latitude: your-latitude
+    longitude: your-longitude
+    elevation: your-elevation
     unit_system: metric
     currency: CLP
     time_zone: "America/Santiago"
@@ -18,9 +18,6 @@ homeassistant:
     media: "/media"
     recordings: "/mnt/recordings"
     legacy_templates: false
-
-python_script:
-  requirements:
 
 python_script:
     requirements:
