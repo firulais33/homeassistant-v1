@@ -21,9 +21,6 @@ homeassistant:
     media: "/media"
     recordings: "/mnt/recordings"
     legacy_templates: false
-  
-mqtt:
-    #certificates: 
 
 camera:
   # Creamos una entidad de camara usando la direccion
