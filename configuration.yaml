@@ -1,7 +1,4 @@
 default_config:
-
-python_script:
-    requirements:
     
 homeassistant:
     name: your-unit-name
@@ -22,30 +19,16 @@ homeassistant:
     recordings: "/mnt/recordings"
     legacy_templates: false
 
-camera:
-  # Creamos una entidad de camara usando la direccion
-  # ip fija de la esp32-cam
-  - platform: generic 
-    name: camera1
-    still_image_url: http://<camera-ip-address>:8081
-    stream_source: http://<camera-ip-address>:8080
-    verify_ssl: false 
-    
-image_processing:
-  - platform: doods
-    # La direccion ip del servidor de DOODS puede
-    # ser la misma direccion de la maquina donde corre
-    # home assistant, pero hay que meterla explicitamente.
-    # homeassistant.local:8080 no funciona.
-    url: http://<doods-server-ip-address>:8080
-    detector: tensorflow
-    scan_interval: 1
-    source:
-        entity_id: camera.camera1
-    file_out: "media/latest.jpg"
-    confidence: 65
-    #labels:
-      #- person
-      #confidence: 65
-      #- car
-      #confidence: 70
+python_script:
+  requirements:
+
+python_script:
+    requirements:
+
+#group: !include groups.yaml
+#scene: !include scenes.yaml
+#script: !include scripts.yaml 
+camera: !include cameras.yaml
+#counter: !include counters.yaml
+#automation: !include automations.yaml
+#image_processing: !include image_processings.yaml

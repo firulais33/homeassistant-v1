@@ -3,7 +3,7 @@
   url: http://192.168.1.18:8080
   detector: default
   source:
-    - entity_id: camera.esp32cam_1_left
+    - entity_id: camera.esp32cam_1
   labels:
     - name: person 
       confidence: 60
@@ -18,7 +18,7 @@
   url: http://192.168.1.18:8080
   detector: default
   source:
-    - entity_id: camera.esp32cam_1_left
+    - entity_id: camera.esp32cam_1
   labels:
     - name: person 
       confidence: 60

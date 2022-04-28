@@ -1,0 +1,9 @@
+# Se usa una esp32-cam que está
+# transmitiendo una foto en formato mjpeg
+# a la dirección <ip-de-la-camara>:8081
+# segúng la configuración encontrada en 
+# el archivo esp32-cam.yaml
+
+- platform: mjpeg
+  name: esp32cam_1
+  mjpeg_url: http://192.168.1.50:8081
