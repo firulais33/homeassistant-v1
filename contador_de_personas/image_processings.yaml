@@ -1,0 +1,29 @@
+- platform: doods
+  scan_interval: 0.5
+  url: http://192.168.1.18:8080
+  detector: default
+  source:
+    - entity_id: camera.esp32cam_1_left
+  labels:
+    - name: person 
+      confidence: 60
+      area:
+        right: 0.45
+        covers: false
+  file_out:
+    - "/media/{{ camera_entity.split('.')[1] }}_latest_left.png"
+  
+- platform: doods
+  scan_interval: 0.5
+  url: http://192.168.1.18:8080
+  detector: default
+  source:
+    - entity_id: camera.esp32cam_1_left
+  labels:
+    - name: person 
+      confidence: 60
+      area:
+        left: 0.55
+        covers: false
+  file_out:
+    - "/media/{{ camera_entity.split('.')[1] }}_latest_right.png"

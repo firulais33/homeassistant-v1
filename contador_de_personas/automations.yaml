@@ -1,0 +1,43 @@
+- id: '1651166567620'
+  alias: Contador de personas (izquierda a derecha +)
+  description: Cuenta las personas que pasan de izquierda a derecha.
+  trigger:
+  - platform: numeric_state
+    entity_id: image_processing.doods_esp32cam_1_left
+    attribute: total_matches
+    above: '0'
+    below: '2'
+  condition: []
+  action:
+  - wait_for_trigger:
+    - platform: numeric_state
+      entity_id: image_processing.doods_esp32cam_1_left_2
+      attribute: total_matches
+      above: '0'
+      below: '2'
+    timeout: 00:00:01
+  - service: counter.increment
+    entity_id: counter.numero_personas
+  mode: single
+  
+- id: '1651167584920'
+  alias: Contador de personas (derecha a izquierda -)
+  description: Cuenta las personas que pasan de derecha a izquierda.
+  trigger:
+  - platform: numeric_state
+    entity_id: image_processing.doods_esp32cam_1_left_2
+    attribute: total_matches
+    above: '0'
+    below: '2'
+  condition: []
+  action:
+  - wait_for_trigger:
+    - platform: numeric_state
+      entity_id: image_processing.doods_esp32cam_1_left
+      attribute: total_matches
+      above: '0'
+      below: '2'
+    timeout: 00:00:01
+  - service: counter.decrement
+    entity_id: counter.numero_personas
+  mode: single
