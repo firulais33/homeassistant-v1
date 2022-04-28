@@ -30,7 +30,7 @@ Podemos ver las fotos que genera el programa cuando se detecta una persona. En e
      <td>Detección lado derecho</td>
   </tr>
   <tr>
-    <td><img src="images/left.png" width=480 height=280></td>
-    <td><img src="images/right.png"  width=480 height=280></td>
+    <td><img src="images/left.png" width=540 height=360></td>
+    <td><img src="images/right.png"  width=540 height=360></td>
   </tr>
 </table>
