@@ -22,7 +22,7 @@ Los parámetros que influyen en la rutina de conteo son:
 - dependiendo de la dirección que se considere " hacia adentro" o "hacia afuera" se fijará si se aumenta o disminuye el contador.
 
 # Ejemplo 
-Podemos ver las fotos que genera el programa cuando se detecta una persona. En este caso, se detecta cómo alguien se mueve desde el lado izquierdo al derecho de la imagen, y se aumenta el contador en una unidad. Las imágenes que se generan son:
+Podemos ver las fotos que genera el programa cuando se detecta una persona. En este caso, se detecta cómo alguien se mueve desde el lado izquierdo al derecho de la imagen, y se aumenta el contador en una unidad. Podemos ver las imágenes que se generan junto con las áreas de detección y el Bounding Box que contiene a la persona detectada.
 
 <table>
   <tr>
