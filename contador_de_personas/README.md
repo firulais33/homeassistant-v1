@@ -20,3 +20,9 @@ Los parámetros que influyen en la rutina de conteo son:
 - el umbral de seguridad aceptado para considerar a alguien una persona (60% por ahora). 
 - el tiempo máximo `timeout` que se debe esperar para gatillar un aumento o disminución del contador, por ahora igual a 1 segundo. Esto denuevo dependerá del entorno en donde esté la cámara.
 - dependiendo de la dirección que se considere " hacia adentro" o "hacia afuera" se fijará si se aumenta o disminuye el contador.
+
+# Ejemplo 
+Podemos ver las fotos que genera el programa cuando se detecta una persona. En este caso, se detecta cómo alguien se mueve desde el lado izquierdo al derecho de la imagen, y se aumenta el contador en una unidad. Las imágenes que se generan son:
+
+![image info](./pictures/image.png "Detección de lado izquierdo")
+![image info](./pictures/image.png "Detección de lado derecho")
