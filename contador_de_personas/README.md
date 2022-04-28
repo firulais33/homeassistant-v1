@@ -24,11 +24,26 @@ Los parámetros que influyen en la rutina de conteo son:
 # Ejemplo 
 Podemos ver las fotos que genera el programa cuando se detecta una persona. En este caso, se detecta cómo alguien se mueve desde el lado izquierdo al derecho de la imagen, y se aumenta el contador en una unidad. Las imágenes que se generan son:
 
+<style>
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style> 
+
 <div class="row">
   <div class="column">
-    <img src="images/left.png" alt="Detección lado izquierdo" style="width:100%">
+    <img src="images/left.png" alt="Detección lado izquierdo">
   </div>
   <div class="column">
-    <img src="images/right.png" alt="Detección lado derecho" style="width:100%">
+    <img src="images/right.png" alt="Detección lado derecho">
   </div>
 </div>
